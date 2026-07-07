@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>배틀마린 A군 계산기</title>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d6efd">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>배틀마린 A군 계산기</h1>
+
+<div class="card">
+
+<label>거리</label>
+
+<input
+id="distance"
+type="number"
+min="1"
+max="60"
+placeholder="거리 입력">
+
+</div>
+
+<div class="card">
+
+<label>조류</label>
+
+<div class="flowBox">
+
+<button id="minus">－</button>
+
+<span id="flow">6</span>
+
+<button id="plus">＋</button>
+
+</div>
+
+</div>
+
+<div class="card result">
+
+<div class="title">역졸</div>
+
+<div id="reverse">-</div>
+
+</div>
+
+<div class="card result">
+
+<div class="title">순졸</div>
+
+<div id="normal">-</div>
+
+</div>
+
+</div>
+
+<script>
+
+if('serviceWorker' in navigator){
+
+navigator.serviceWorker.register("service-worker.js");
+
+}
+
+</script>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
